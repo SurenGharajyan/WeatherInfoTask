@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PixomaticWeather</string>
+    <string name="change_country">Change Country</string>
+    <string name="pressure">pressure</string>
+
+    <string-array name="countries">
+        <item>England</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>Netherlands</item>
+    </string-array>
+</resources>

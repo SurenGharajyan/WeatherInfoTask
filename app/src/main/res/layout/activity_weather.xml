@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pixomaric.com.pixomaticweather.WeatherActivity"
+    android:padding="10dp"
+    >
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+
+        android:id="@+id/relativeLayout">
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/flag_img"
+            android:src="@drawable/germany"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/condition"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/condition"
+            android:src="@drawable/icon_1" />
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/weather_icon"
+            android:fontFamily="casual"
+            android:text="Partly Cloud"
+
+            android:textColor="#000"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/ltemperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/condition"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/temperature"
+                android:layout_alignBottom="@+id/temperature"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:fontFamily="casual"
+                android:text="temperature"
+                android:textColor="#000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="50dp"
+                android:fontFamily="casual"
+                android:text="0°C"
+                android:textColor="#000"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ltemperature"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/pressure"
+                android:textColor="#000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/condition"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="casual"
+                android:text="1"
+                android:textColor="#000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/condition"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="casual"
+                android:text="atm p."
+                android:textColor="#000"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/country_name_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout"
+        android:fontFamily="casual"
+        android:text="Germany"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
+        android:textSize="25sp" />
+
+
+    <Button
+        android:id="@+id/change_country"
+        android:text="@string/change_country"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="casual"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+</RelativeLayout>
